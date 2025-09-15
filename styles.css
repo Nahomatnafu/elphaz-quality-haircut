@@ -34,6 +34,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 15px 20px;
+    position: relative;
 }
 
 /* Logo Styles */
@@ -41,6 +42,7 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex: 1;
 }
 
 .logo-icon {
@@ -58,6 +60,12 @@ body {
 }
 
 /* Navigation Styles */
+.nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .nav-list {
     display: flex;
     list-style: none;
@@ -110,6 +118,10 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(255, 162, 221, 0.3);
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .book-now-btn:hover {
@@ -200,17 +212,32 @@ body {
         gap: 20px;
         padding: 15px 20px;
     }
-    
+
+    .logo {
+        flex: none;
+        justify-content: center;
+    }
+
+    .nav {
+        position: static;
+        transform: none;
+    }
+
     .nav-list {
         gap: 20px;
     }
-    
+
     .nav-link {
         font-size: 14px;
     }
-    
+
     .logo-text {
         font-size: 20px;
+    }
+
+    .book-now-btn {
+        flex: none;
+        justify-content: center;
     }
     
     .hero {
