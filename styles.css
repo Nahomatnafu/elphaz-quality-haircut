@@ -103,6 +103,13 @@ body {
     width: 100%;
 }
 
+/* Book Now Button Container */
+.book-now-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
 /* Book Now Button */
 .book-now-btn {
     background: linear-gradient(135deg, #FFA2DD, #368A4B);
@@ -118,10 +125,6 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(255, 162, 221, 0.3);
-    flex: 1;
-    text-align: center;
-    display: flex;
-    justify-content: flex-end;
 }
 
 .book-now-btn:hover {
@@ -235,7 +238,7 @@ body {
         font-size: 20px;
     }
 
-    .book-now-btn {
+    .book-now-container {
         flex: none;
         justify-content: center;
     }
