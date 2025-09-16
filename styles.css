@@ -373,15 +373,29 @@ body {
 
 .products-slider {
     position: relative;
+    margin: 0 60px 60px 60px;
+    padding: 20px 0;
+}
+
+.products-slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     overflow: hidden;
-    margin-bottom: 60px;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .products-track {
     display: flex;
     gap: 30px;
     transition: transform 0.5s ease;
-    padding: 0 20px;
+    padding: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .product-card {
@@ -486,11 +500,11 @@ body {
 }
 
 .prev-btn {
-    left: -25px;
+    left: -60px;
 }
 
 .next-btn {
-    right: -25px;
+    right: -60px;
 }
 
 .products-button-container {
@@ -605,9 +619,12 @@ body {
         margin-bottom: 60px;
     }
 
+    .products-slider {
+        margin: 0 40px 60px 40px;
+    }
+
     .products-track {
         gap: 20px;
-        padding: 0 10px;
     }
 
     .product-card {
@@ -621,11 +638,11 @@ body {
     }
 
     .prev-btn {
-        left: -20px;
+        left: -40px;
     }
 
     .next-btn {
-        right: -20px;
+        right: -40px;
     }
 }
 
@@ -680,9 +697,12 @@ body {
         gap: 15px;
     }
 
+    .products-slider {
+        margin: 0 20px 60px 20px;
+    }
+
     .products-track {
         gap: 15px;
-        padding: 0 5px;
     }
 
     .product-card {
@@ -704,10 +724,10 @@ body {
     }
 
     .prev-btn {
-        left: -15px;
+        left: -20px;
     }
 
     .next-btn {
-        right: -15px;
+        right: -20px;
     }
 }
