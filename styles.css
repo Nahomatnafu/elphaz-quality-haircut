@@ -373,20 +373,16 @@ body {
 
 .products-slider {
     position: relative;
-    margin: 0 60px 60px 60px;
+    margin-bottom: 60px;
     padding: 20px 0;
+    overflow: hidden;
 }
 
-.products-slider::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    z-index: 1;
-    pointer-events: none;
+.products-slider-wrapper {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 80px;
 }
 
 .products-track {
@@ -500,11 +496,11 @@ body {
 }
 
 .prev-btn {
-    left: -60px;
+    left: 20px;
 }
 
 .next-btn {
-    right: -60px;
+    right: 20px;
 }
 
 .products-button-container {
@@ -619,8 +615,8 @@ body {
         margin-bottom: 60px;
     }
 
-    .products-slider {
-        margin: 0 40px 60px 40px;
+    .products-slider-wrapper {
+        padding: 0 60px;
     }
 
     .products-track {
@@ -638,11 +634,11 @@ body {
     }
 
     .prev-btn {
-        left: -40px;
+        left: 15px;
     }
 
     .next-btn {
-        right: -40px;
+        right: 15px;
     }
 }
 
@@ -697,8 +693,8 @@ body {
         gap: 15px;
     }
 
-    .products-slider {
-        margin: 0 20px 60px 20px;
+    .products-slider-wrapper {
+        padding: 0 50px;
     }
 
     .products-track {
@@ -724,10 +720,10 @@ body {
     }
 
     .prev-btn {
-        left: -20px;
+        left: 10px;
     }
 
     .next-btn {
-        right: -20px;
+        right: 10px;
     }
 }
