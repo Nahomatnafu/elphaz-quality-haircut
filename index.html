@@ -91,10 +91,109 @@
                 </div>
             </div>
         </section>
+
+        <section id="products" class="products-section">
+            <div class="container">
+                <h2 class="section-title">Our Products</h2>
+                <p class="section-subtitle">Professional-grade tools and products<br>for the modern gentleman</p>
+
+                <div class="products-slider">
+                    <div class="products-track">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=300&h=300&fit=crop" alt="Hair Styling Gel" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Premium Hair Gel</h3>
+                                <p class="product-description">Strong hold styling gel for all-day control</p>
+                                <span class="product-price">$24.99</span>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=300&h=300&fit=crop" alt="Professional Clippers" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Pro Clippers</h3>
+                                <p class="product-description">Professional-grade hair clippers for precision cuts</p>
+                                <span class="product-price">$89.99</span>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=300&h=300&fit=crop" alt="Wooden Comb" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Wooden Comb</h3>
+                                <p class="product-description">Handcrafted wooden comb for gentle styling</p>
+                                <span class="product-price">$19.99</span>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=300&h=300&fit=crop" alt="Face Mask" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Charcoal Face Mask</h3>
+                                <p class="product-description">Deep cleansing mask for healthy skin</p>
+                                <span class="product-price">$16.99</span>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=300&h=300&fit=crop" alt="Hair Spray" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Texture Spray</h3>
+                                <p class="product-description">Volumizing spray for natural texture</p>
+                                <span class="product-price">$22.99</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="slider-btn prev-btn" onclick="slideProducts(-1)">‹</button>
+                    <button class="slider-btn next-btn" onclick="slideProducts(1)">›</button>
+                </div>
+
+                <div class="products-button-container">
+                    <button class="products-btn">Shop All Products</button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <!-- Footer content will be added later -->
     </footer>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 5;
+        const slideWidth = 310; // 280px card + 30px gap
+
+        function slideProducts(direction) {
+            const track = document.querySelector('.products-track');
+            currentSlide += direction;
+
+            // Loop back to beginning/end
+            if (currentSlide < 0) {
+                currentSlide = totalSlides - 3; // Show last 3 cards
+            } else if (currentSlide > totalSlides - 3) {
+                currentSlide = 0;
+            }
+
+            const translateX = -currentSlide * slideWidth;
+            track.style.transform = `translateX(${translateX}px)`;
+        }
+
+        // Auto-slide every 4 seconds
+        setInterval(() => {
+            slideProducts(1);
+        }, 4000);
+    </script>
 </body>
 </html>
